@@ -6,10 +6,13 @@ use pocketmine\command\Command;
 use pocketmine\command\CommandSender;
 use pocketmine\permission\DefaultPermissions;
 use pocketmine\player\Player;
+use pocketmine\plugin\PluginOwned;
 use pocketmine\utils\TextFormat;
 use Zonasky\PlayTime\PlayTime;
 
-class PlayTimeCommand extends Command {
+class PlayTimeCommand extends Command implements PluginOwned {
+
+	private PlayTime $plugin;
     
     public function __construct() {
         parent::__construct("playtime", "View your playtime");
@@ -36,4 +39,8 @@ class PlayTimeCommand extends Command {
         $sender->sendMessage(TextFormat::GREEN . $player->getName() . "'s Playtime: " . TextFormat::RED . $playtime);
         return true;
     }
+
+	public function getOwningPlugin() : PlayTime {
+		return $this->plugin;
+	}
 }
