@@ -14,10 +14,11 @@ class PlayTimeCommand extends Command implements PluginOwned {
 
 	private PlayTime $plugin;
     
-    public function __construct() {
+    public function __construct(PlayTime $plugin) {
         parent::__construct("playtime", "View your playtime");
 		$this->setAliases(["pt"]);
         $this->setPermission(DefaultPermissions::ROOT_USER);
+		$this->plugin = $plugin;
     }
     
     public function execute(CommandSender $sender, string $commandLabel, array $args): bool {
