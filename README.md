@@ -13,7 +13,7 @@ PlayTime::getInstance()->getPlayTime($player);
 ```
 ### TODO:
 * Add playtime rewards
-* add a top platime leaderboard
+* add a top playtime leaderboard
 
 ## License:
 PlayTime is released under the [MIT License](https://github.com/Zonasky/PlayTime/blob/main/LICENSE). See LICENSE for more information.
