@@ -1,6 +1,6 @@
 name: PlayTime
-version: 1.0.0
-api: 4.0.0
+version: 1.0.1
+api: 5.0.0
 main: Zonasky\PlayTime\PlayTime
 author: ["Inaayat"]
 description: A playtime plugin by Zonasky
